@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tin tức - Đọc báo online</title>
+	<meta charshet="utf-8" />
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<style type="text/css">
+		.total{
+			padding: 0px;
+			margin: 0px;
+		}
+		.header{
+			background-color: #af1517;
+			color: white;
+			padding: 30px;
+		}
+		#head1 h3{
+			padding: 0px;
+			margin: 0px;
+
+		}
+		#head1 img{
+			margin-top:-30px;
+		}
+		.container-1{
+  			vertical-align: middle;
+  			white-space: nowrap;
+  			position: absolute;
+  			right: 5%;
+  			top: 5%;
+		}
+
+		.header2{
+			background-color: grey;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0px;
+		}
+		.header2 ul {
+			margin: 0px;
+			padding: 0px;
+		}
+		.header2 li{
+			display: inline-block;	
+			padding: 8px;
+		}
+		.header2 li a{
+			text-decoration: none;
+			color: white;
+			padding: 5px;
+		}
+		.header2 li a:hover{
+			background-color: #bc0032;
+			color: white;
+		}
+		.header2 li a:active{
+			background-color: white;
+			color: black;
+		}
+		#content-left{
+			width: 50%;
+			display: inline-block;
+			border-right: 1px solid grey;
+		}
+		#content-left{
+			display: inline-block;
+			padding: 0px;
+		}
+		#content-mid{
+			width: 23%;
+			display: inline-block;
+			height: 565px;
+			overflow: scroll;
+			border-right: 1px solid grey;
+
+		}
+		#content-right{
+			width: 24%;
+			display: inline-block;
+			height: 565px;
+			overflow: scroll;
+		}
+		
+		#content-left{
+			overflow: hidden;
+
+		}
+		#A{
+			text-decoration: none;
+			color: black;
+			font-size: 30px;
+		}
+		#A:hover{
+			color: red;
+		}
+		#content-mid a{
+			text-decoration: none;
+			color: black;
+		}
+		#content-mid a:hover{
+			color: red;
+		}
+		#content-right a{
+			text-decoration: none;
+			color: black;
+		}
+		#content-right a:hover{
+			color: red;
+		}
+		.bot2{
+			width: 28%;
+		}
+		.bot3{
+			width: 20%;
+		}
+		.bot1{
+			border: 1px solid grey;
+			width: 49%;
+			height: auto;
+			display: inline-block;
+		}
+		.bot {
+			float: left;
+			padding: 15px;
+			display: inline-block;
+			height: 160px;
+			width: 200px;
+		}
+		.bot a{
+			text-decoration: none;
+			color: black;
+		}
+		.bot a:hover{
+			color: red;
+		}
+		.bot2{
+			border-right: 1px solid grey;
+			overflow: scroll;
+			height: 458px;
+			display: inline-block;
+		}
+		.bot3{
+			border-right: 1px solid grey;
+			height: auto;
+			display: inline-block;
+			overflow: scroll;
+			height: 458px;
+		}
+		.content-TTCN{
+			display: flex;
+			flex-direction: row;
+		}
+		.content-TTCN a{
+			text-decoration: none;
+			color: #004175;
+		}
+		.content-TTCN a:hover{
+			color: blue;
+		}
+		.content-bot{
+			display: flex;
+			flex-direction: row;
+		}
+		.bot3 a{
+			text-decoration: none;
+			color: black;
+		}
+		.bot3 a:hover{
+			color: red;
+		}
+		.footer{
+			background-color:  #cccccc;
+			height: auto;
+			text-align: left;
+			margin-top: 20px;
+			padding: 0px;
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+
+		}
+		.footer1{
+			width: 50%;
+		}
+		.footer2{
+			width: 50%;
+		}
+		#time{
+			padding: 0px;
+			margin: 0px;
+		}
+		.hihi{
+			width: 35%;
+			border-right: 1px solid grey;
+		}
+		#hihi1 a{
+			text-decoration: none;
+			color: black;
+			font-size: 25px;
+		}
+		.hihi2{
+			display: flex;
+			flex-direction: row;
+		}
+		.hihi2 a{
+			text-decoration: none;
+			color: black;
+		}
+		#hihi1 a:hover{
+			color: red;
+		}
+		.hihi2 a:hover{
+			color: red;
+		}
+
+		.haha{
+			width: 45%;
+			border-right: 1px solid grey;
+		}
+		.hihihaha{
+			display: flex;
+			flex-direction: row;
+		}
+		.haha-con1{
+			width: 50%;
+			margin: 10px;
+		}
+		.haha-con2{
+			width: 50%;
+			margin: 10px;
+		}
+		.haha-con{
+			display: flex;
+			flex-direction: row;
+		}
+		.tinthethao{
+			padding: 5px;
+			display: flex;
+			flex-direction: row;
+			width: 33.3%;
+		}
+		.tinthethao img{
+			margin: 4px;
+			width: 200px;
+			height: 130px;
+		}
+		.tinthethao a{
+			text-decoration: none;
+			color: black;
+			margin: 2px;
+			width: 90%;
+			height: auto;
+		}
+		.tinthethao a:hover{
+			color: red;
+		}
+		.kinhdoanh{
+			padding: 5px;
+			display: flex;
+			flex-direction: row;
+			width: 33.3%;
+		}
+		.kinhdoanh img{
+			margin: 4px;
+			width: 200px;
+			height: 130px;
+		}
+		.kinhdoanh a{
+			text-decoration: none;
+			color: black;
+			margin: 2px;
+			width: 90%;
+			height: auto;
+		}
+		.kinhdoanh a:hover{
+			color: red;
+		}
+		.khoahoc{
+			padding: 5px;
+			display: flex;
+			flex-direction: row;
+			width: 33.3%;
+		}
+		.khoahoc img{
+			margin: 4px;
+			width: 200px;
+			height: 130px;
+		}
+		.khoahoc a{
+			text-decoration: none;
+			color: black;
+			margin: 2px;
+			width: 90%;
+			height: auto;
+		}
+		.khoahoc a:hover{
+			color: red;
+		}
+		.pagination {
+ 		   display: inline-block;
+
+		}
+		.pagination a {
+			color: black;
+    		padding: 8px 16px;
+    		text-decoration: none;
+		}
+
+		.pagination a.active {
+   			background-color: #4CAF50;
+    		color: white;
+    		border-radius: 5px;
+		}
+
+		.pagination a:hover:not(.active) {
+    		background-color: #ddd;
+    		border-radius: 5px;
+		}
+	</style>
+</head>
+<body style="background-color: white" id="Trang-chu">
+<div class="total">
+
+	<div class="header">
+		<div id="head1">
+			<img src="./pnews.png" width="50" ">
+			<marquee scrollamount="20" direction="right"><h1> Thời Sự Mỗi Ngày </h1></marquee>
+		</div>
+		<div class="container-1">
+      		<span class="icon"><i class="fa fa-search"></i></span>
+      		<input type="search" id="search" placeholder="Search..." />
+  		</div>
+  		<div>
+  			<p id="time">Giờ</p>
+  		</div>
+  		<script type="text/javascript">
+		document.getElementById("time").innerHTML = Date();
+	</script>
+	</div>
+
+	<div class="header2">
+		<ul>
+			<li><a href="Trangchu.html">TRANG CHỦ</a></li>|
+			<li>
+				<a href="Thoisu.html">THỜI SỰ</a>
+				<ul class="subtem">
+					<div><a href="#">Xây Dựng Đảng</a> </div>
+					<div><a href="#">Cải Cách Hành Chính</a> </div>
+					<div><a href="#">Nghị Quyết & Cuộc sống</a> </div>
+				</ul>
+			</li>|
+			<li>
+				<a href="Chinhtri.html">CHÍNH TRỊ</a>
+				<ul class="subtem">
+					<div><a href="#">Nông Nghiệp</a> </div>
+					<div><a href="#">Công Nghiệp</a> </div>
+					<div><a href="#">Đầu tư</a> </div>
+				</ul>
+			</li>|
+			<li>
+				<a href="Kinhte.html">KINH TẾ</a>
+				<ul class="subtem">
+					<div><a href="#">Âm Nhạc</a> </div>
+					<div><a href="#">Hài Kịch</a> </div>
+					<div><a href="#">Phim & Điện Ảnh</a> </div>
+				</ul>
+			</li>|
+			<li>
+				<a href="Phapluat.html">PHÁP LUẬT</a>
+				<ul class="subtem">
+					<div><a href="#">Bất động sản</a> </div>
+					<div><a href="#">eBank</a> </div>
+					<div><a href="#">Bán hàng online</a> </div>
+				</ul>
+			</li>|
+			<li>
+				<a href="Xahoi.html">XÃ HỘI</a>
+				<ul class="subtem">
+					<div><a href="#">An Ninh - Quốc Phòng</a> </div>
+					<div><a href="#">Cuộc Sống</a> </div>
+					<div><a href="#">Thời Tiết</a> </div>
+				</ul>
+			</li>|
+			<li>
+				<a href="Vanhoa.html">VĂN HOÁ</a>
+				<ul class="subtem">
+					<div><a href="#">Cộng Đồng</a> </div>
+					<div><a href="#">Tâm Sự</a> </div>
+					<div><a href="#">Ý Nghĩa</a> </div>
+				</ul>
+			</li>|
+			<li>
+				<a href="Khoagiao.html">KHOA GIÁO</a>
+				<ul class="subtem">
+					<div><a href="#">Cải Cách</a> </div>
+					<div><a href="#">Chính Sách Nhà Nước</a> </div>
+					<div><a href="#">Đào Tạo & Phát Triển</a> </div>
+				</ul>
+			</li>|
+			<li>
+				<a href="Thethao.html">THỂ THAO</a>
+				<ul class="subtem">
+					<div><a href="#">Xây Dựng Đảng</a> </div>
+					<div><a href="#">Cải Cách Hành Chính</a> </div>
+					<div><a href="#">Nghị Quyết & Cuộc sống</a> </div>
+				</ul>
+			</li>|
+			<li>
+				<a href="Quocphong.html">QUỐC PHÒNG</a>
+				<ul class="subtem">
+					<div><a href="#">Xây Dựng Đảng</a> </div>
+					<div><a href="#">Cải Cách Hành Chính</a> </div>
+					<div><a href="#">Nghị Quyết & Cuộc sống</a> </div>
+				</ul>
+			</li>|
+			<li>
+				<a href="Anninh.html">AN NINH</a>
+				<ul class="subtem">
+					<div><a href="#">Xây Dựng Đảng</a> </div>
+					<div><a href="#">Cải Cách Hành Chính</a> </div>
+					<div><a href="#">Nghị Quyết & Cuộc sống</a> </div>
+				</ul>
+			</li>|
+			<li>
+				<a href="Bandoc.html">BẠN ĐỌC</a>
+				<ul class="subtem">
+					<div><a href="#">Xây Dựng Đảng</a> </div>
+					<div><a href="#">Cải Cách Hành Chính</a> </div>
+					<div><a href="#">Nghị Quyết & Cuộc sống</a> </div>
+				</ul>
+			</li>|
+			<li>
+				<a href="Quocte.html">QUỐC TẾ</a>
+				<ul class="subtem">
+					<div><a href="#">Xây Dựng Đảng</a> </div>
+					<div><a href="#">Cải Cách Hành Chính</a> </div>
+					<div><a href="#">Nghị Quyết & Cuộc sống</a> </div>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div style="background-color:#cccccc; width: 80px;margin-top: 10px; font-size: 20px; padding: 5px">
+		<a href="#" style="text-decoration: none; color: #800000">Quốc tế</a>
+	</div>
+	
+	</div>
+	<div class="content">
+
+		<div id="content-left">
+			<p>
+				<a href="#Thoi-su"><img src="./ha1.jpg" width="700"></a>
+			</p>
+			
+			<a id="A" href="#Thoi-su" > ‘Quá nóng vội thông qua chủ trương đầu tư nhà hát 1.500 tỷ đồng'</a>
+
+			<p>
+				UBND TP. Hà Nội đã phê duyệt quy hoạch hàng loạt dự án khu đô thị quy mô lớn.
+				Theo Trưởng Ban Tổ chức TƯ Phạm Minh Chính, có những đồng chí được giao quyền lực đã lạm quyền, lộng quyền trong việc sử dụng quyền lực.
+			</p>
+		</div>
+
+		<div id="content-mid">
+			<a href="#">Chưa lấy phiếu tín nhiệm Chủ tịch nước và Bộ trưởng TT&TT
+</a><br>
+			<hr>
+			<a href="#">Donald Trump quyết hạ Trung Quốc: Việt Nam rơi vào rủi ro lưỡng cực</a><br>
+			<hr>
+			<a href="#">Cặp đôi thản nhiên diễn 'cảnh nóng' trong quán trà sữa ở Lạng Sơn</a><br>
+			<hr>
+			<a href="#">Tài tử từng thách thức Lý Tiểu Long qua đời ở tuổi 44 vì uống rượu</a><br>
+			<hr>
+			<a href="#">TP Hà Nội nhận được 2 đề xuất xây dựng “Tượng đài Độc Lập” và “Tượng đài chiến thắng Điện Biên Phủ trên không”.</a><br>
+			<hr>
+			<a href="#">Chỉ với một bộ phận trên cơ thể, cô gái 21 tuổi thu hút 9 triệu người theo dõi</a><br>
+			<hr>
+			<a href="#">Thực hư tình hình sức khỏe của Tổng thống Philippines</a><br>
+			<hr>
+			<a href="#">Người đàn ông trong nhà nghỉ và cú lừa của đại gia Bình Định</a><br>
+			<hr>
+			<a href="#">Cô gái 19 tuổi chết thương tâm khi rơi từ tòa nhà cao tầng ở Sài Gòn</a><br>
+			<a href="#">Chưa lấy phiếu tín nhiệm Chủ tịch nước và Bộ trưởng TT&TT
+</a><br>
+			<hr>
+			<a href="#">Donald Trump quyết hạ Trung Quốc: Việt Nam rơi vào rủi ro lưỡng cực</a><br>
+			<hr>
+			<a href="#">Cặp đôi thản nhiên diễn 'cảnh nóng' trong quán trà sữa ở Lạng Sơn</a><br>
+			<hr>
+			<a href="#">Tài tử từng thách thức Lý Tiểu Long qua đời ở tuổi 44 vì uống rượu</a><br>
+			<hr>
+			<a href="#">TP Hà Nội nhận được 2 đề xuất xây dựng “Tượng đài Độc Lập” và “Tượng đài chiến thắng Điện Biên Phủ trên không”.</a><br>
+		</div>
+
+		<div id="content-right">
+			<iframe width="336" height="565" src="http://img.vietnamnetad.vn/html/2018/10/Banner_interactive_336x600_1010/336x600.html?clickVNN=http://tracking.vietnamnetad.vn/Dout/Click.ashx?itemId=4199&amp;isLink=1&amp;nextUrl=https://bit.ly/2CasdPc" marginwidth="0" allowtransparency="true" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+		</div>
+	</div>
+</div>
+	<hr style="margin: 0px;">
+<div>
+	<canvas id="canvas" width="1395" height="50" style="background-color: rgb(255, 255, 255); cursor: pointer;"></canvas>
+</div>
+
+<div class="content-bot">
+	<div class="bot1">
+		<div>
+			<img src="./ha2.png" style="width: 100%; height: 50%">
+		</div>
+		<div class="bot">
+			<a href="#"><img src="https://vnn-imgs-f.vgcloud.vn/2018/10/11/10/ong-le-phuoc-hoai-bao-xin-nghi-viec-de-di-hoc-tien-si-200x112.jpg">Siết chặt việc giả danh báo điện tử và tỷ lệ tin tiêu cực trên báo chí</a>
+		</div>
+		<div class="bot">
+			<a href="#"><img src="https://vnn-imgs-f.vgcloud.vn/2018/10/11/10/ong-le-phuoc-hoai-bao-xin-nghi-viec-de-di-hoc-tien-si-200x112.jpg">Siết chặt việc giả danh báo điện tử và tỷ lệ tin tiêu cực trên báo chí</a>
+		</div>
+		<div class="bot">
+			<a href="#"><img src="https://vnn-imgs-f.vgcloud.vn/2018/10/11/10/	ong-le-phuoc-hoai-bao-xin-nghi-viec-de-di-hoc-tien-si-200x112.jpg">Siết chặt việc giả danh báo điện tử và tỷ lệ tin tiêu cực trên báo chí</a>
+		</div>
+		<div class="bot">
+			<a href="#"><img src="https://vnn-imgs-f.vgcloud.vn/2018/10/11/10/ong-le-phuoc-hoai-bao-xin-nghi-viec-de-di-hoc-tien-si-200x112.jpg">Siết chặt việc giả danh báo điện tử và tỷ lệ tin tiêu cực trên báo chí</a>
+		</div>
+		<div class="bot">
+			<a href="#"><img src="https://vnn-imgs-f.vgcloud.vn/2018/10/11/10/ong-le-phuoc-hoai-bao-xin-nghi-viec-de-di-hoc-tien-si-200x112.jpg">Siết chặt việc giả danh báo điện tử và tỷ lệ tin tiêu cực trên báo chí</a>
+		</div>
+		<div class="bot">
+			<a href="#"><img src="https://vnn-imgs-f.vgcloud.vn/2018/10/11/10/ong-le-phuoc-hoai-bao-xin-nghi-viec-de-di-hoc-tien-si-200x112.jpg">Siết chặt việc giả danh báo điện tử và tỷ lệ tin tiêu cực trên báo chí</a>
+		</div>
+	</div>
+
+
+	<div class="bot2">
+		<div id="TTCN">
+			<img src="./ha3.png" style="width: 100%">
+		</div>
+
+		<div class="content-TTCN">
+			<div>
+				<a href="#">
+					<img src="https://dantricdn.com/zoom/130_100/2018/10/9/dims-153907616031431477484.jpg" style="margin: 5px">
+				</a>
+			</div>
+			<div>
+				<a href="#">Viễn cảnh việc làm rơi vào tay robot lại thêm gần</a>
+				<p>
+					Mới đây, Nhật Bản đã tạo ra một con robot hình người có thể thực hiện các nhiệm vụ ... Xem thêm
+				</p>
+			</div>
+		</div>
+
+		<div class="content-TTCN">
+			<div>
+				<a href="#">
+					<img src="https://dantricdn.com/zoom/130_100/2018/10/9/dims-153907616031431477484.jpg" style="margin: 5px">
+				</a>
+			</div>
+			<div>
+				<a href="#">Viễn cảnh việc làm rơi vào tay robot lại thêm gần</a>
+				<p>
+					Mới đây, Nhật Bản đã tạo ra một con robot hình người có thể thực hiện các nhiệm vụ ... Xem thêm
+				</p>
+			</div>
+		</div>
+
+		<div class="content-TTCN">
+			<div>
+				<a href="#">
+					<img src="https://dantricdn.com/zoom/130_100/2018/10/9/dims-153907616031431477484.jpg" style="margin: 5px">
+				</a>
+			</div>
+			<div>
+				<a href="#">Viễn cảnh việc làm rơi vào tay robot lại thêm gần</a>
+				<p>
+					Mới đây, Nhật Bản đã tạo ra một con robot hình người có thể thực hiện các nhiệm vụ ... Xem thêm
+				</p>
+			</div>
+		</div>
+
+				<div class="content-TTCN">
+			<div>
+				<a href="#">
+					<img src="https://dantricdn.com/zoom/130_100/2018/10/9/dims-153907616031431477484.jpg" style="margin: 5px">
+				</a>
+			</div>
+			<div>
+				<a href="#">Viễn cảnh việc làm rơi vào tay robot lại thêm gần</a>
+				<p>
+					Mới đây, Nhật Bản đã tạo ra một con robot hình người có thể thực hiện các nhiệm vụ ... Xem thêm
+				</p>
+			</div>
+		</div>
+
+				<div class="content-TTCN">
+			<div>
+				<a href="#">
+					<img src="https://dantricdn.com/zoom/130_100/2018/10/9/dims-153907616031431477484.jpg" style="margin: 5px">
+				</a>
+			</div>
+			<div>
+				<a href="#">Viễn cảnh việc làm rơi vào tay robot lại thêm gần</a>
+				<p>
+					Mới đây, Nhật Bản đã tạo ra một con robot hình người có thể thực hiện các nhiệm vụ ... Xem thêm
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="bot3">
+		<div>
+			<a href="http://www.tdtu.edu.vn/"><img src="./ha-tdt.png" style="width: 100%; position: -webkit-sticky;position: sticky; top: 0px"> </a><hr> 
+			<a href="#">Phu nhân cố Thủ tướng Phạm Văn Đồng từ trần</a><hr>
+			<a href="#">Ông Phan Văn Vĩnh nhập viện chữa bệnh tim</a><hr>
+			<a href="#">Vụ điện giật chết trước cổng trường: Lời kể của nữ sinh thoát nạn</a><hr>
+			<a href="#">Thưởng Tết 2019 sẽ được doanh nghiệp chi trả ra sao?</a><hr>
+			<a href="#">Luật 'ngầm' trong gia đình đại gia 70 tuổi ở Hà thành</a><hr>
+			<a href="#">Cô gái bị người yêu cũ đâm 9 nhát từng bị dọa tạt axít</a><hr>
+			<a href="#">'Người đẹp nhân ái' Thùy Tiên nóng bỏng trước thềm Hoa hậu Quốc tế</a><hr>
+			<a href="#">Nam thanh niên nằm chết giữa quốc lộ, cổ gần đứt lìa</a><hr>
+			<a href="#">Thầy Park không ngán Malaysia, tuyên bố đứng đầu bảng AFF Cup</a><hr>
+			<a href="#">Thưởng Tết 2019 sẽ được doanh nghiệp chi trả ra sao?</a><hr>
+			
+		</div>
+	</div>
+</div>
+
+<hr style="margin: 0px;">
+
+<div class="hihihaha">
+<div class="hihi">
+	<div id="hihi1">
+		<div>
+				<a href="#"><strong> Một Ngày Sống Cả Trăm Năm </strong></a>
+			<p>
+				TTO - Một ngày sống cả trăm năm - thái độ sống này được Phạm Thị Huế, sinh năm 1996, quê Thái Bình, lựa chọn trong 6 năm qua, sau khi cô biết mình mắc bệnh...
+			</p>
+		</div>
+		<div>
+			<a href="#">
+				<img src="./ha4.jpg" style="margin: 5px">
+			</a>
+		</div>
+	</div>
+<hr>
+	<div class="hihi2">
+		<div>
+			<a href="#">
+				<img src="./ha5.jpg" style="margin: 5px">
+			</a>
+		</div>
+		<div>
+			<a href="#"><strong> Một Ngày Sống Cả Trăm Năm </strong></a>
+			<p style="color: #4d4d4d">
+				TTO - Một ngày sống cả trăm năm - thái độ sống này được Phạm Thị Huế, sinh năm 1996, quê Thái Bình, lựa chọn trong 6 năm qua, sau khi cô biết mình mắc bệnh...
+			</p>
+		</div>
+	</div>
+<hr>
+	<div class="hihi2">
+		<div>
+			<a href="#">
+				<img src="./ha5.jpg" style="margin: 5px">
+			</a>
+		</div>
+		<div>
+			<a href="#"><strong> Một Ngày Sống Cả Trăm Năm </strong></a>
+			<p style="color: #4d4d4d">
+				TTO - Một ngày sống cả trăm năm - thái độ sống này được Phạm Thị Huế, sinh năm 1996, quê Thái Bình, lựa chọn trong 6 năm qua, sau khi cô biết mình mắc bệnh...
+			</p>
+		</div>
+	</div>
+<hr>
+	<div class="hihi2">
+		<div>
+			<a href="#">
+				<img src="./ha5.jpg" style="margin: 5px">
+			</a>
+		</div>
+		<div>
+			<a href="#"><strong> Một Ngày Sống Cả Trăm Năm </strong></a>
+			<p style="color: #4d4d4d">
+				TTO - Một ngày sống cả trăm năm - thái độ sống này được Phạm Thị Huế, sinh năm 1996, quê Thái Bình, lựa chọn trong 6 năm qua, sau khi cô biết mình mắc bệnh...
+			</p>
+		</div>
+	</div>
+<hr>
+	<div class="hihi2">
+		<div>
+			<a href="#">
+				<img src="./ha5.jpg" style="margin: 5px">
+			</a>
+		</div>
+		<div>
+			<a href="#"><strong> Một Ngày Sống Cả Trăm Năm </strong></a>
+			<p style="color: #4d4d4d">
+				TTO - Một ngày sống cả trăm năm - thái độ sống này được Phạm Thị Huế, sinh năm 1996, quê Thái Bình, lựa chọn trong 6 năm qua, sau khi cô biết mình mắc bệnh...
+			</p>
+		</div>
+	</div>
+	<div>
+		<div class="pagination">
+  			<a href="#">&laquo;</a>
+  			<a href="#" class="active">1</a>
+  			<a href="#">2</a>
+  			<a href="#">3</a>
+  			<a href="#">&raquo;</a>
+		</div>
+	</div>
+</div>
+
+<div class="haha">
+	<div style="font-size: 25px;/"><strong>Videos</strong></div>
+
+	<div class="haha-con">
+
+	<div class="haha-con1">
+		<iframe width="auto" height="200" src="https://www.youtube.com/embed/e9Zsd9NYmHU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<p style="margin: 2px;width: 90%;height: 60px">
+			Ngôi làng bí ẩn nhất Trung Quốc: Không 1 con muỗi nào dám đến gần trong suốt 1.000 năm qua
+		</p>
+		<iframe width="300" height="200" src="https://www.youtube.com/embed/dklnNMAAKFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<p style="margin: 2px;width: 90%;height: 60px">
+			Ngôi nhà của Nobita ở Nhật Bản có thật sự nghèo như trong trong sự thật không ?
+		</p>
+	</div>
+
+	<div class="haha-con2">
+		<iframe width="300" height="200" src="https://www.youtube.com/embed/OTMbwpql6Ts" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<p style="margin: 2px;width: 90%;height: 60px">
+			Quá trình hình thành đất nước Việt Nam
+		</p>
+		<iframe width="300" height="200" src="https://www.youtube.com/embed/b4oU2l7KIZ8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<p style="margin: 2px;width: 90%;height: 60px">
+			10 hành tinh bí ẩn và kì lạ nhất trong Vũ Trụ- Có Thể Bạn chưa biết
+		</p>
+	</div>
+	</div>
+	<hr style="margin: 0px;">
+	<hr style="margin: 0px;">
+	<hr style="margin: 0px;">
+
+	<div style="font-size: 25px;/"><strong>Tin thể Thao</strong></div>
+	<div class="tinthethao">
+		<div>
+			<a href="#"><img src="https://cdn.tuoitre.vn/zoom/214_143/2018/10/18/photo1539841807690-15398418076912032685779.jpg"></a>
+			<a href="#">
+				Những hình ảnh hấp dẫn của UEFA Nations League
+			</a>
+		</div>
+		<div>
+			<a href="#"><img src="https://cdn.tuoitre.vn/zoom/212_132/2018/10/17/photo1539780998570-153978099857124327077.jpg"></a>
+			<a href="#">
+				Tuyển Việt Nam tập buổi đầu tiên tại Hàn Quốc
+			</a>
+		</div>
+		<div>
+			<a href="#"><img src="https://cdn.tuoitre.vn/zoom/212_132/2018/10/17/photo1539729263023-15397292630241699837778.jpg"></a>
+			<a href="#">
+				Năm tệ hại nhất của bóng đá Đức
+			</a>
+		</div>
+	</div>
+
+	<hr style="margin: 0px;">
+	<hr style="margin: 0px;">
+	<hr style="margin: 0px;">
+
+	<div style="font-size: 25px;/"><strong>Kinh doanh</strong></div>
+	<div class="kinhdoanh">
+		<div>
+			<a href="#"><img src="https://cdn.tuoitre.vn/zoom/212_132/2018/10/15/photo1539583980780-1539583980780149038303.jpg"></a>
+			<a href="#">
+				Tại sao chúng ta lại bị kim cương thu hút?
+			</a>
+		</div>
+		<div>
+			<a href="#"><img src="https://cdn.tuoitre.vn/zoom/212_132/2018/10/18/photo1539824143088-15398241430881413601246.jpg"></a>
+			<a href="#">
+				Đến đậu nành vào tầm ngắm vì có cỏ kế đồng
+			</a>
+		</div>
+		<div>
+			<a href="#"><img src="https://cdn.tuoitre.vn/zoom/212_132/2018/10/18/photo1539835277593-1539835277630202729173.jpg"></a>
+			<a href="#">
+				Đại gia bất động sản rủ nhau lên sàn chứng khoán tìm vốn
+			</a>
+		</div>
+	</div>
+
+	<hr style="margin: 0px;">
+	<hr style="margin: 0px;">
+	<hr style="margin: 0px;">
+
+	<div style="font-size: 25px;/"><strong>Khoa học</strong></div>
+	<div class="khoahoc">
+		<div>
+			<a href="#"><img src="https://cdn.tuoitre.vn/zoom/212_132/2018/10/17/photo1539763314839-15397633148392071423531.jpg"></a>
+			<a href="#">
+				Đi tìm bí mật vị cay của ớt
+			</a>
+		</div>
+		<div>
+			<a href="#"><img src="https://cdn.tuoitre.vn/zoom/212_132/2018/10/17/photo1539741372855-15397413728561127115412.jpg"></a>
+			<a href="#">
+				Gần 900 học sinh tranh tài bắn tên lửa nước
+			</a>
+		</div>
+		<div>
+			<a href="#"><img src="https://cdn.tuoitre.vn/zoom/212_132/2018/10/16/photo1539654325887-1539654325887833357421.png"></a>
+			<a href="#">
+				'Điểm danh' những sinh vật cao nhất mọi thời đại
+			</a>
+		</div>
+	</div>
+	</div>
+	
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<hr style="margin: 0px;">
+<hr style="margin: 0px;">
+<hr style="margin: 0px;">
+<div class="footer">
+	<div class="content footer1">
+		<p><strong>© 2017-2018 Báo Việt Nam All rights reserved.</strong></p>
+		<p><strong>Thành lập ngày 22/2/1998</strong></p>
+		<p><strong>Cơ quan chủ quản: Bộ Thông tin và Truyền thông</strong></p>
+		<p><strong> Số giấy phép:</strong> 437/GP - BTTTT, cấp ngày 28/10/2013</p>
+		<p><strong> Tổng Biên Tập:</strong> Phạm Cao Nam Hải & Nguyễn Hữu Phúc</p>
+		<p><strong> Tòa soạn:</strong> Tòa nhà Đăng Khoa , Phòng 306, 441/21 Lê Văn Lương, Phường Tân Phong, Quận 7,Tp. Hồ Chí Minh</p>
+		<p><strong> Đường dây nóng:</strong> 0965 357 203</p>
+		<p><strong> Điện thoại:</strong> (038) 123xxx , <strong> Fax:</strong> (024) 456xxx ,<strong> Email:</strong> 51600023@student.tdtu.edu.vn</p>
+		<p><strong> Văn phòng đại diện tại TP.HCM:</strong> Tòa nhà Đăng Khoa , Phòng 306, 441/21 Lê Văn Lương, Phường Tân Phong, Quận 7,Tp. Hồ Chí Minh.</p>
+		<p><strong> Đường dây nóng:</strong> 0965 357 203 ,<strong> Điện thoại:</strong> (028) 123xxx,<strong> Fax:</strong> (028) 123xxx</p>
+		<p><strong> ® Chỉ được phát hành lại thông tin từ website này khi có sự đồng ý bằng văn bản của Phạm Cao Nam Hải & Nguyễn Hữu Phúc</strong></p>
+	</div>
+
+	<div class="content footer2">
+		<p><strong> CÔNG TY CỔ PHẦN TRUYỀN THÔNG " HẢI PHÚC COMPANY"</strong></p>
+		<p><strong> Hà Nội. Tel:</strong> (024) 123XXX</p>
+		<p><strong> Hotline:</strong> 0965 357 203</p>
+		<p><strong> Email:</strong> 51600069@student.tdtu.edu.vn</p>
+		<p><strong> Tp.HCM. Tel:</strong> (028) 123xxx</p>
+		<p><strong> Hotline:</strong> 0339 238 777</p>
+		<p><strong> Email:</strong> 51600069@student.tdtu.edu.vn</p>
+		<p><strong> Hỗ trợ kỹ thuật:</strong> Liên hệ 0965 357 203</p>
+		<p><strong> VTổng đài Tel:</strong> (024) 123xxxx</p>
+		<p><strong> Liên hệ Tòa soạn - Đặt "Thời sự mỗi ngày" làm trang chủ </strong></p>
+		<p><strong> ® Chỉ được phát hành lại thông tin từ website này khi có sự đồng ý bằng văn bản của Phạm Cao Nam Hải & Nguyễn Hữu Phúc</strong></p>
+	</div>
+</div>
+
+
+</body>
+</html>

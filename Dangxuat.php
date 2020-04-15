@@ -1,0 +1,9 @@
+<?php
+	session_start();
+	if(isset($_SESSION['username'])){
+		unset($_SESSION['username']);
+		header('location:Dangnhap.php')
+	}else{
+		header('location:Dangnhap.php');
+	}
+?>
